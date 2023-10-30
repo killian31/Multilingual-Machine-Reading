@@ -22,7 +22,6 @@ for each of the languages follows in table
 <th style="text-align: center;">English</th>
 <th style="text-align: center;">Finnish</th>
 <th style="text-align: center;">Japanese</th>
-<th style="text-align: center;"></th>
 </tr>
 </thead>
 <tbody>
@@ -30,28 +29,25 @@ for each of the languages follows in table
 <td style="text-align: center;">when</td>
 <td style="text-align: center;">milloin (when)</td>
 <td style="text-align: center;"><div class="CJK*">
-<p><span>UTF8</span><span>goth</span> 日本</p>
+<p>日本</p>
 </div>
 <p>(Japan)</p></td>
-<td style="text-align: center;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">what</td>
 <td style="text-align: center;">mikä (what)</td>
 <td style="text-align: center;"><div class="CJK*">
-<p><span>UTF8</span><span>goth</span>アメリカ</p>
+<p>アメリカ</p>
 </div>
 <p>(America)</p></td>
-<td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">how</td>
 <td style="text-align: center;">missä (where)</td>
 <td style="text-align: center;"><div class="CJK*">
-<p><span>UTF8</span><span>goth</span>世界</p>
+<p>世界</p>
 </div>
 <p>(World)</p></td>
-<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
@@ -73,7 +69,6 @@ And the three most common last tokens for the languages follows in table
 <th style="text-align: center;">English</th>
 <th style="text-align: center;">Finnish</th>
 <th style="text-align: center;">Japanese</th>
-<th style="text-align: center;"></th>
 </tr>
 </thead>
 <tbody>
@@ -81,28 +76,25 @@ And the three most common last tokens for the languages follows in table
 <td style="text-align: center;">born</td>
 <td style="text-align: center;">syntyi (born in)</td>
 <td style="text-align: center;"><div class="CJK*">
-<p><span>UTF8</span><span>goth</span>た</p>
+<p>た</p>
 </div>
 <p>(rice field)</p></td>
-<td style="text-align: center;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">founded</td>
 <td style="text-align: center;">on (is)</td>
 <td style="text-align: center;"><div class="CJK*">
-<p><span>UTF8</span><span>goth</span>か</p>
+<p>か</p>
 </div>
 <p>(mosquito)</p></td>
-<td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">die</td>
 <td style="text-align: center;">kuoli (died)</td>
 <td style="text-align: center;"><div class="CJK*">
-<p><span>UTF8</span><span>goth</span> 何</p>
+<p>何</p>
 </div>
 <p>(what)</p></td>
-<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
@@ -319,11 +311,11 @@ fine-tuned using TiDy QA. The results are stated in Table
 
 <div id="tab_perplex">
 
-| Language | Perplexity (raw)  | Perplexity (fine-tuned) |     |
-|:--------:|:-----------------:|:-----------------------:|:---:|
-| English  |       50.51       |          44.41          |     |
-| Finnish  | 19,789,662,094.37 |          90.08          |     |
-| Japanese |       62.38       |          44.39          |     |
+| Language | Perplexity (raw)  | Perplexity (fine-tuned) |
+|:--------:|:-----------------:|:-----------------------:|
+| English  |       50.51       |          44.41          |
+| Finnish  | 19,789,662,094.37 |          90.08          |
+| Japanese |       62.38       |          44.39          |
 
 Perplexity for pre-trained Transformer language models before and after
 fine-tuning.
@@ -382,13 +374,12 @@ test set:
 
 <div id="tab:cm_1">
 
-|     | N-A |  A  | Total |
-|:---:|:---:|:---:|:-----:|
-| N-A | 278 | 217 |  495  |
-|  A  | 98  | 397 |  495  |
+|                | Non-Answerable |  Answerable  | Total |
+|:--------------:|:--------------:|:------------:|:-----:|
+| Non-Answerable |      278       |     217      |  495  |
+|   Answerable   |      98        |     397      |  495  |
 
-Confusion Matrix of the `model_1_2b` on the Test set. N-A =
-Non-answerable and A = Answerable
+Confusion Matrix of the `model_1_2b` on the Test set.
 
 </div>
 
@@ -518,11 +509,11 @@ explanation to the differences in performance across languages.
 
 <div id="tab_eval">
 
-| Language | Exact matches | F1-score |     |
-|:--------:|:-------------:|:--------:|:---:|
-| English  |    70.9 %     |  77.3 %  |     |
-| Finnish  |    74.9 %     |  79.9 %  |     |
-| Japanese |    68.0 %     |  68.1 %  |     |
+| Language | Exact matches | F1-score |
+|:--------:|:-------------:|:--------:|
+| English  |    70.9 %     |  77.3 %  |
+| Finnish  |    74.9 %     |  79.9 %  |
+| Japanese |    68.0 %     |  68.1 %  |
 
 Exact matches and F1-scores for pre-trained XLM-RoBERTa-base question
 answering model fine-tuned on Answerble TiDy QA dataset for English,
